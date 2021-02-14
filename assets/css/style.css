@@ -60,6 +60,22 @@ body {
   background: url("../images/story-bg.png") center center/cover no-repeat local;
 }
 
+.left-border {
+  position: fixed;
+  z-index: 9999;
+  height: 80vh;
+  bottom: 0;
+  left: 0;
+}
+
+.right-border {
+  position: fixed;
+  z-index: 9999;
+  height: 80vh;
+  bottom: 0;
+  right: 0;
+}
+
 @media (max-width: 767px) {
   body {
     font-size: 14px;
@@ -1844,7 +1860,8 @@ img {
 }
 
 .couple-section .middle-couple-pic img {
-  border: 5px solid #e1d9bf;
+  border: 15px solid #e1d9bf;
+  border-style: ridge;
 }
 
 @media (max-width: 991px) {

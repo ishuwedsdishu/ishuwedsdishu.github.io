@@ -58,26 +58,16 @@ body {
   background-color: #fff;
   font-size: 16px;
   font-size: 1rem;
-  color: #818492;
+  color: #C9AB62 !important;
+  text-shadow: 2px 2px 2px #000;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  background: url("../images/story-bg.png") center center/cover no-repeat local;
-}
-
-.left-border {
-  position: fixed;
-  z-index: 9999;
-  height: 80vh;
-  bottom: 0;
-  left: 0;
-}
-
-.right-border {
-  position: fixed;
-  z-index: 9999;
-  height: 80vh;
-  bottom: 0;
-  right: 0;
+  background: linear-gradient(rgba(95,0,0,1) 0%, rgba(131,0,0,1) 81%);
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #212529;
+  overflow-x: hidden;
 }
 
 @media (max-width: 767px) {
@@ -92,7 +82,8 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2f2f2f;
+  color: #C9AB62;
+  text-shadow: 2px 2px 2px #000;
 }
 
 ul {
@@ -123,6 +114,14 @@ img {
 
 .page-wrapper {
   position: relative;
+  padding: 10px;
+  margin: -39px 30px 5px 30px;
+  height: 100%;
+  box-shadow: 12px 0 15px -4px rgb(0 0 0 / 80%), -12px 0 8px -4px rgb(0 0 0 / 36%);
+  background: rgb(204,21,3);
+  background: -moz-radial-gradient(circle, rgba(204,21,3,1) 0%, rgba(96,16,11,1) 74%);
+  background: -webkit-radial-gradient(circle, rgba(204,21,3,1) 0%, rgba(96,16,11,1) 74%);
+  background: radial-gradient(circle, rgba(204,21,3,1) 0%, rgba(96,16,11,1) 74%);
   overflow: hidden;
 }
 
@@ -307,7 +306,8 @@ img {
   font-family: "Great Vibes", cursive;
   font-size: 48px;
   font-size: 3rem;
-  color: #2f2f2f;
+  color: #C9AB62;
+  text-shadow: 2px 2px 2px #000;
   margin: 0;
   padding-top: 1.1em;
   text-transform: capitalize;
@@ -522,6 +522,8 @@ img {
   height: 100%;
   position: fixed;
   z-index: 99999;
+  top: 0px;
+  left: 0px;
 }
 
 .preloader .middle {
@@ -545,7 +547,7 @@ img {
 }
 
 .preloader .middle .fi:before {
-  color: #b19a56;
+  color: #90120b;
   font-size: 22px;
 }
 
@@ -1344,53 +1346,63 @@ img {
 #0.4	hero slider
 --------------------------------------------------------------*/
 
+.top-border img {
+  transform: rotate(180deg);
+  margin-top: 30px;
+  filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.7));
+}
+
+.bottom-border img {
+  margin-top: 30px;
+  filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.7));
+}
+
 .hero-ganesha {
-  background-image: url(../images/bgdecoration.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  z-index: 0;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  padding: 50px 0px;
 }
 
 .gnesha-img-container {
-  box-shadow: 0 0 10px #840c30;
-  background-color: #bd063d45;
-  border-radius: 50%;
-  width: 350px;
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  margin: 0 auto;
 }
 .gnesha-img-container:before {
   content: '';
   background-image: url(../images/ganesha-border.png);
   background-size: cover;
-  animation: spin 8s linear infinite;
-  width: 350px;
-  height: 350px;
+  animation: spin 20s linear infinite;
+  width: 200px;
+  height: 200px;
   position: absolute;
   filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.5));
 }
 
 .mantra-container {
-  position: absolute;
-  bottom: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 70px;
 }
 
-img.ganesha-img, img.ganesha-mantra {
+img.ganesha-img {
+  max-width: 50px;
+  max-height: 100px;
   opacity: 0;
   filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.7));
+}
+
+img.ganesha-mantra {
+  opacity: 0;
+  filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.7));
+}
+
+.wedd-img img {
+  filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.7));
+  padding-top: 20px;
 }
 
 @keyframes spin{
@@ -1661,20 +1673,20 @@ img.ganesha-img, img.ganesha-mantra {
 
 .footer-section {
   text-align: center;
-  padding: 100px 0;
+  /* padding: 100px 0; */
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .footer-section {
     padding: 0 0 80px 0;
   }
-}
+} */
 
 .footer-section .couple-name {
   background: url("../images/footer-couple-name-frame.png") center center/cover no-repeat local;
   width: 415px;
   height: 483px;
-  margin: 0 auto 120px;
+  margin: 60px auto 60px;
   padding-left: 45px;
   display: table;
   text-align: center;
@@ -1684,7 +1696,7 @@ img.ganesha-img, img.ganesha-mantra {
   .footer-section .couple-name {
     width: 300px;
     height: 349px;
-    margin: 0 auto 80px;
+    margin: 40px auto 40px;
     padding-left: 45px;
   }
 }
@@ -1830,6 +1842,7 @@ img.ganesha-img, img.ganesha-mantra {
   background: url("../images/clock-bg.png") center center/cover no-repeat local;
   float: left;
   display: table;
+  filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.5));
 }
 
 @media (max-width: 991px) {
@@ -1843,8 +1856,10 @@ img.ganesha-img, img.ganesha-mantra {
   .wedding-date #clock>div {
     background: none;
     border: 2px solid #b19a56;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
     width: calc(50% - 20px);
-    height: 50%;
+    height: 125px;
     margin: 10px;
     padding-bottom: 15px;
   }
@@ -1877,6 +1892,8 @@ img.ganesha-img, img.ganesha-mantra {
   font-size: 3.375rem;
   line-height: 1em;
   padding-top: 15px;
+  color: #C9AB62;
+  text-shadow: 2px 2px 2px #000;
 }
 
 @media (max-width: 991px) {
@@ -1891,7 +1908,7 @@ img.ganesha-img, img.ganesha-mantra {
 --------------------------------------------------------------*/
 
 .couple-section {
-  background-color: #fffdf6;
+  /* background-color: #fffdf6; */
 }
 
 .couple-section .couple-area>div {
@@ -3742,3 +3759,127 @@ img.ganesha-img, img.ganesha-mantra {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.left-scroll{
+  position: fixed;
+  left: 0;
+  top:0;
+  min-height: 100%;
+  min-width: 45px;
+  filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.7));
+  background-size: 54px !important;
+  background: transparent url('../images/bg-left.png') repeat 0 0;/*- Change picture here-*/
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  font-family: 'Roboto', sans-serif;
+  
+  -webkit-animation: 20s linear 0s normal none infinite loop-top;
+  -moz-animation: 20s linear 0s normal none infinite loop-top;
+  -ms-animation: 20s linear 0s normal none infinite loop-top;
+  -o-animation: 20s linear 0s normal none infinite loop-top;
+  animation: 20s linear 0s normal none infinite loop-top;
+}
+.right-scroll{
+  position: fixed;
+  right: 0;
+  top:0;
+  min-height: 100%;
+  min-width: 45px;
+  filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.7));
+  background-size: 54px !important;
+  background: transparent url('../images/bg.png') repeat 0 0;/* Change picture here*/
+  font-family: 'Roboto', sans-serif;
+  -webkit-animation: 20s linear 0s normal none infinite loop-bottom;
+  -moz-animation: 20s linear 0s normal none infinite loop-bottom;
+  -ms-animation: 20s linear 0s normal none infinite loop-bottom;
+  -o-animation: 20s linear 0s normal none infinite loop-bottom;
+  animation: 20s linear infinite loop-bottom; 
+}
+/*-------------------------------
+    Animations
+---------------------------------*/
+@-webkit-keyframes loop-top {
+    from {background-position:100% 100%;}
+    to {background-position: 0 0;}
+  }
+  
+  @-moz-keyframes loop-top {
+    from {background-position:100% 100%;}
+    to {background-position: 0 0;}
+  }
+  
+  @-ms-keyframes loop-top {
+    from {background-position:100% 100%;}
+    to {background-position: 0 0;}
+  }
+  
+  @-o-keyframes loop-top {
+    from {background-position:100% 100%;}
+    to {background-position: 0 0;}
+  }
+  
+  @keyframes loop-top {
+    from {background-position:bottom;}
+    to {background-position: top;}
+  }
+
+/*************************************************/
+
+  @-webkit-keyframes loop-bottom {
+    from {background-position:0 0;}
+    to {background-position: 100% 100%;}
+  }
+  
+  @-moz-keyframes loop-bottom {
+    from {background-position:0 0;}
+    to {background-position: 100% 100%;}
+  }
+  
+  @-ms-keyframes loop-bottom {
+    from {background-position:0 0;}
+    to {background-position: 100% 100%;}
+  }
+  
+  @-o-keyframes loop-bottom {
+    from {background-position:0 0;}
+    to {background-position: 100% 100%;}
+  }
+  
+  @keyframes loop-bottom {
+    from {background-position:top;}
+    to {background-position: bottom;}
+  }
+/*-------------------------------
+    End of Animations
+---------------------------------*/
+
+.hang-left {
+  position: fixed;
+  top: -70px;
+  left: 0;
+  transform-origin: top;
+  animation: moveIt 3s ease-in-out infinite;
+  width: 20%;
+}
+.hang-right {
+  position: fixed;
+  top: -10px;
+  right: -40px;
+  transform-origin: top;
+  animation: moveIt 2.5s ease-in-out infinite;
+  width: 30%;
+}
+
+.hang-left img, .hang-right img {  
+  filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.7));
+}
+
+@keyframes moveIt {
+  0%, 100% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+}
